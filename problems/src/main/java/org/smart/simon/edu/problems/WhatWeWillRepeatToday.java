@@ -13,7 +13,7 @@ public class WhatWeWillRepeatToday {
 
     private static final char DIR_SEPARATOR = '/';
 
-    private static final String LEET_CODE_PACKET = "com.example.leetcode";
+    private static final String LEET_CODE_PACKET = "org.smart.simon.edu.problems.leetcode";
 
     private static final String CLASS_FILE_SUFFIX = ".class";
 
@@ -22,7 +22,7 @@ public class WhatWeWillRepeatToday {
 
     public static void main(String[] args) {
         List<Class<?>> classes = WhatWeWillRepeatToday.find(LEET_CODE_PACKET);
-//        classes.stream().forEach(e-> System.out.println(e.getName()) );
+        classes.stream().forEach(e-> System.out.println(e.getName()) );
         Random rand = new Random();
         Class<?> randomClass = classes.get(rand.nextInt(classes.size()));
         System.out.printf("Today we are going repeat problem - %s ", randomClass.getName().replace(LEET_CODE_PACKET + ".", ""));
