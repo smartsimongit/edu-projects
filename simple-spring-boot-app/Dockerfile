@@ -1,4 +1,5 @@
-FROM openjdk:17-jdk-alpine
+FROM openjdk:23
 MAINTAINER smart_simon
-COPY target/docker-message-server-1.0.0.jar message-server-1.0.0.jar
-ENTRYPOINT ["java","-jar","/message-server-1.0.0.jar"]
+COPY  build/libs/SimpleApp-0.0.1.jar SimpleApp-0.0.1.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","/SimpleApp-0.0.1.jar"]
