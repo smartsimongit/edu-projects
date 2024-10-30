@@ -1,7 +1,6 @@
 # edu-projects
 just-for-fun
-
-http://localhost:8080/api/v1/persons
+ 
 
 
 //https://habr.com/ru/companies/skillbox/articles/689226/
@@ -10,6 +9,15 @@ http://localhost:8080/api/v1/persons
 //https://tproger.ru/articles/7-prakticheskih-zadanij-s-sobesedovanija-na-poziciju-junior-java-developer/
 //https://habr.com/ru/articles/440436/
 
+************
+
+http://localhost:8080/api/v1/persons
+
+docker run -d -p 8080:8080 --name simple-spring-boot-app-container httpd
+
+
+
+https://github.com/Digital-Habits/homework_3-springboot-/blob/master/src/main/java/ru/digitalhabits/homework3/service/PersonService.java
 
 
 
