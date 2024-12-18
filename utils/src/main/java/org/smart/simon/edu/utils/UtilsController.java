@@ -21,7 +21,7 @@ public class UtilsController {
     @GetMapping(produces = MediaType.TEXT_PLAIN_VALUE)
     public String getFromResourceFile() throws IOException {
         String str = "";
-        Resource resource = new ClassPathResource("sample.txt"); 
+        Resource resource = new ClassPathResource("file.txt");
         try (FileInputStream inputStream = new FileInputStream(resource.getFile())) {
             str = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
 
