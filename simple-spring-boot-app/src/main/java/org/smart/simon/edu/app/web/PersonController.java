@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import org.smart.simon.edu.app.model.PersonShortResponse;
 import org.smart.simon.edu.app.service.PersonService;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,13 +23,15 @@ import java.util.List;
 @RequestMapping("/api/v1/persons")
 @RequiredArgsConstructor
 public class PersonController {
-private final PersonService personService;
+
+    private final PersonService personService;
+
     @Operation(
             summary = "Get all persons",
             responses = @ApiResponse(responseCode = "200", description = "Persons", content = @Content(array = @ArraySchema(schema = @Schema(implementation = PersonShortResponse.class))))
     )
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<PersonShortResponse> persons() {
-        return personService.findAll();
+    public ResponseEntity<List> persons() {
+        return ResponseEntity.ok(personService.findAll());
     }
 }
