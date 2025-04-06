@@ -1,7 +1,7 @@
 package org.smart.simon.edu.problems.leetcode;
 
-public class Easy9 {
-    public boolean isPalindrome(int x) {
+public class Easy9PalindromeNumber {
+    public static boolean isPalindrome(int x) {
         int temp = x;
         int nn = 0;
         if (x < 0) {
@@ -13,6 +13,10 @@ public class Easy9 {
             temp /= 10;
         }
         return nn == x;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(  isPalindrome(123321));
     }
 
 }
