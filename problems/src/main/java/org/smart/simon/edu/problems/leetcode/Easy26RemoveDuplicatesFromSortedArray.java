@@ -1,12 +1,11 @@
 package org.smart.simon.edu.problems.leetcode;
 
-public class Easy26 {
+public class Easy26RemoveDuplicatesFromSortedArray {
     public static int removeDuplicates(int[] nums) {
 
         int count = 0;
 
         for (int i = 0; i < nums.length; i++) {
-
             if (i < nums.length - 1 && nums[i] == nums[i + 1]) {
                 continue;
             }
